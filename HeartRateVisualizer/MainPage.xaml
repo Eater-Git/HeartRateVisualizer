@@ -1,0 +1,44 @@
+﻿<Page
+    x:Class="HeartRateVisualizer.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HeartRateVisualizer"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:lvc="using:LiveCharts.Uwp"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <lvc:CartesianChart Grid.Row="1" Background="Transparent">
+            <lvc:CartesianChart.Series>
+                <lvc:LineSeries Values="{Binding ChartValues}" PointGeometrySize="18" StrokeThickness="4"  Stroke="#e4007f" Fill="Transparent" />
+            </lvc:CartesianChart.Series>
+            <lvc:CartesianChart.AxisX>
+                <lvc:Axis LabelFormatter="{Binding DateTimeFormatter}" 
+                          MaxValue="{Binding AxisMax}" 
+                          MinValue="{Binding AxisMin}"
+                          DisableAnimations="True">
+                    <lvc:Axis.Separator>
+                        <lvc:Separator Step="{Binding AxisStep}"></lvc:Separator>
+                    </lvc:Axis.Separator>
+                </lvc:Axis>
+            </lvc:CartesianChart.AxisX>
+            <lvc:CartesianChart.AxisY>
+                <lvc:Axis LabelFormatter="{Binding BPMFormatter}"
+                          MaxValue="{Binding BPMAxisMax}" 
+                          MinValue="{Binding BPMAxisMin}"
+                          DisableAnimations="True">
+                    <lvc:Axis.Separator>
+                        <lvc:Separator Step="{Binding BPMAxisStep}"></lvc:Separator>
+                    </lvc:Axis.Separator>
+                </lvc:Axis>
+            </lvc:CartesianChart.AxisY>
+        </lvc:CartesianChart>
+    </Grid>
+</Page>
