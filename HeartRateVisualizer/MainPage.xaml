@@ -35,7 +35,8 @@
                           MaxValue="{Binding BPMAxisMax}" 
                           MinValue="{Binding BPMAxisMin}"
                           DisableAnimations="True"
-                          FontSize="16">
+                          FontSize="16"
+                          Position="RightTop">
                     <lvc:Axis.Separator>
                         <lvc:Separator Step="{Binding BPMAxisStep}"></lvc:Separator>
                     </lvc:Axis.Separator>
