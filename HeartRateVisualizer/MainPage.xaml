@@ -23,7 +23,8 @@
                 <lvc:Axis LabelFormatter="{Binding DateTimeFormatter}" 
                           MaxValue="{Binding AxisMax}" 
                           MinValue="{Binding AxisMin}"
-                          DisableAnimations="True">
+                          DisableAnimations="True"
+                          FontSize="16">
                     <lvc:Axis.Separator>
                         <lvc:Separator Step="{Binding AxisStep}"></lvc:Separator>
                     </lvc:Axis.Separator>
@@ -33,7 +34,8 @@
                 <lvc:Axis LabelFormatter="{Binding BPMFormatter}"
                           MaxValue="{Binding BPMAxisMax}" 
                           MinValue="{Binding BPMAxisMin}"
-                          DisableAnimations="True">
+                          DisableAnimations="True"
+                          FontSize="25">
                     <lvc:Axis.Separator>
                         <lvc:Separator Step="{Binding BPMAxisStep}"></lvc:Separator>
                     </lvc:Axis.Separator>
