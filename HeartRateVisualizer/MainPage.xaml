@@ -17,7 +17,7 @@
         </Grid.RowDefinitions>
         <lvc:CartesianChart Grid.Row="1" Background="Transparent">
             <lvc:CartesianChart.Series>
-                <lvc:LineSeries Values="{Binding ChartValues}" PointGeometrySize="18" StrokeThickness="4"  Stroke="#e4007f" Fill="Transparent" />
+                <lvc:LineSeries Values="{Binding ChartValues}" PointGeometrySize="12" StrokeThickness="4"  Stroke="#e4007f" Fill="Transparent" />
             </lvc:CartesianChart.Series>
             <lvc:CartesianChart.AxisX>
                 <lvc:Axis LabelFormatter="{Binding DateTimeFormatter}" 
