@@ -45,6 +45,7 @@ namespace HeartRateVisualizer
             this.advWatcher = new BluetoothLEAdvertisementWatcher();
             advWatcher.Received += WathcerReceived;
             this.advWatcher.ScanningMode = BluetoothLEScanningMode.Active;  //これがないとサービスとかデバイス名の情報が得られないっぽい？
+            advWatcher.SignalStrengthFilter.SamplingInterval = TimeSpan.FromMilliseconds(700);//重さ改善
             this.advWatcher.Start();
 
         }
