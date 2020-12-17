@@ -17,13 +17,14 @@
         </Grid.RowDefinitions>
         <lvc:CartesianChart Grid.Row="1" Background="Transparent">
             <lvc:CartesianChart.Series>
-                <lvc:LineSeries Values="{Binding ChartValues}" PointGeometrySize="18" StrokeThickness="4"  Stroke="#e4007f" Fill="Transparent" />
+                <lvc:LineSeries Values="{Binding ChartValues}" PointGeometrySize="12" StrokeThickness="4"  Stroke="#e4007f" Fill="Transparent" />
             </lvc:CartesianChart.Series>
             <lvc:CartesianChart.AxisX>
                 <lvc:Axis LabelFormatter="{Binding DateTimeFormatter}" 
                           MaxValue="{Binding AxisMax}" 
                           MinValue="{Binding AxisMin}"
-                          DisableAnimations="True">
+                          DisableAnimations="True"
+                          FontSize="16">
                     <lvc:Axis.Separator>
                         <lvc:Separator Step="{Binding AxisStep}"></lvc:Separator>
                     </lvc:Axis.Separator>
@@ -33,7 +34,9 @@
                 <lvc:Axis LabelFormatter="{Binding BPMFormatter}"
                           MaxValue="{Binding BPMAxisMax}" 
                           MinValue="{Binding BPMAxisMin}"
-                          DisableAnimations="True">
+                          DisableAnimations="True"
+                          FontSize="16"
+                          Position="RightTop">
                     <lvc:Axis.Separator>
                         <lvc:Separator Step="{Binding BPMAxisStep}"></lvc:Separator>
                     </lvc:Axis.Separator>
