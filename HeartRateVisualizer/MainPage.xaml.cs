@@ -103,7 +103,8 @@ namespace HeartRateVisualizer
             if (ChartValues[0] == null) //ﾇﾙﾎﾟ回避
                 return;
             if(ChartValues[0].DateTime.Ticks < AxisMin)
-                ChartValues.RemoveAt(0);
+                await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal,
+                () => ChartValues.RemoveAt(0)); //ChartValuesの書き換えをUIスレッドでしか行わないようにすることでスレッドセーフでないChartValuesを安全に操作する
 
         }
 
