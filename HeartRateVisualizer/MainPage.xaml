@@ -7,17 +7,12 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:lvc="using:LiveCharts.Uwp"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="Black">
 
     <Grid>
-
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-        </Grid.RowDefinitions>
-        <lvc:CartesianChart Grid.Row="1" Background="Transparent">
+        <lvc:CartesianChart Background="Black">
             <lvc:CartesianChart.Series>
-                <lvc:LineSeries Values="{Binding ChartValues}" PointGeometrySize="12" StrokeThickness="4"  Stroke="#e4007f" Fill="Transparent" />
+                <lvc:LineSeries Values="{Binding ChartValues}" PointGeometrySize="12" StrokeThickness="4"  Stroke="#e91b86" Fill="Transparent" />
             </lvc:CartesianChart.Series>
             <lvc:CartesianChart.AxisX>
                 <lvc:Axis LabelFormatter="{Binding DateTimeFormatter}" 
@@ -26,7 +21,7 @@
                           DisableAnimations="True"
                           FontSize="16">
                     <lvc:Axis.Separator>
-                        <lvc:Separator Step="{Binding AxisStep}"></lvc:Separator>
+                        <lvc:Separator Step="{Binding AxisStep}" Stroke="#a0cf31"></lvc:Separator>
                     </lvc:Axis.Separator>
                 </lvc:Axis>
             </lvc:CartesianChart.AxisX>
@@ -38,7 +33,7 @@
                           FontSize="16"
                           Position="RightTop">
                     <lvc:Axis.Separator>
-                        <lvc:Separator Step="{Binding BPMAxisStep}"></lvc:Separator>
+                        <lvc:Separator Step="{Binding BPMAxisStep}" Stroke="#a0cf31"></lvc:Separator>
                     </lvc:Axis.Separator>
                 </lvc:Axis>
             </lvc:CartesianChart.AxisY>
